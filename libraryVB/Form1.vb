@@ -90,4 +90,10 @@ Public Class Form1
         End If
 
     End Sub
+    Private Sub ABookIsReturnedToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ABookIsReturnedToolStripMenuItem.Click
+        Dim index As Integer = DataGridView1.CurrentCell.RowIndex
+        DataGridView1.Rows(index).Cells(3).Value = "No"
+        DataGridView1.Rows(index).Cells(4).Value = "N/A"
+        DataGridView1.Rows(index).Cells(5).Value = "N/A"
+    End Sub
 End Class
