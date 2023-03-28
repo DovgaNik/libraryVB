@@ -22,7 +22,6 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.CheckedListBox = New System.Windows.Forms.CheckedListBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CreateANewDatabaseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -35,18 +34,13 @@ Partial Class Form1
         Me.ActionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ABookIsBorrowedToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ABookIsReturnedToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.InfoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InShaAllahToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'CheckedListBox
-        '
-        Me.CheckedListBox.FormattingEnabled = True
-        Me.CheckedListBox.Location = New System.Drawing.Point(0, 27)
-        Me.CheckedListBox.Name = "CheckedListBox"
-        Me.CheckedListBox.Size = New System.Drawing.Size(800, 422)
-        Me.CheckedListBox.TabIndex = 0
         '
         'MenuStrip1
         '
@@ -99,18 +93,18 @@ Partial Class Form1
         'AddANewBookToolStripMenuItem
         '
         Me.AddANewBookToolStripMenuItem.Name = "AddANewBookToolStripMenuItem"
-        Me.AddANewBookToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.AddANewBookToolStripMenuItem.Size = New System.Drawing.Size(201, 26)
         Me.AddANewBookToolStripMenuItem.Text = "Add a new book"
         '
         'RemoveABookToolStripMenuItem
         '
         Me.RemoveABookToolStripMenuItem.Name = "RemoveABookToolStripMenuItem"
-        Me.RemoveABookToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.RemoveABookToolStripMenuItem.Size = New System.Drawing.Size(201, 26)
         Me.RemoveABookToolStripMenuItem.Text = "Remove a book"
         '
         'ActionsToolStripMenuItem
         '
-        Me.ActionsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ABookIsBorrowedToolStripMenuItem, Me.ABookIsReturnedToolStripMenuItem})
+        Me.ActionsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ABookIsBorrowedToolStripMenuItem, Me.ABookIsReturnedToolStripMenuItem, Me.InfoToolStripMenuItem})
         Me.ActionsToolStripMenuItem.Name = "ActionsToolStripMenuItem"
         Me.ActionsToolStripMenuItem.Size = New System.Drawing.Size(72, 24)
         Me.ActionsToolStripMenuItem.Text = "Actions"
@@ -118,14 +112,20 @@ Partial Class Form1
         'ABookIsBorrowedToolStripMenuItem
         '
         Me.ABookIsBorrowedToolStripMenuItem.Name = "ABookIsBorrowedToolStripMenuItem"
-        Me.ABookIsBorrowedToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.ABookIsBorrowedToolStripMenuItem.Size = New System.Drawing.Size(223, 26)
         Me.ABookIsBorrowedToolStripMenuItem.Text = "A book is borrowed"
         '
         'ABookIsReturnedToolStripMenuItem
         '
         Me.ABookIsReturnedToolStripMenuItem.Name = "ABookIsReturnedToolStripMenuItem"
-        Me.ABookIsReturnedToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.ABookIsReturnedToolStripMenuItem.Size = New System.Drawing.Size(223, 26)
         Me.ABookIsReturnedToolStripMenuItem.Text = "A book is returned"
+        '
+        'InfoToolStripMenuItem
+        '
+        Me.InfoToolStripMenuItem.Name = "InfoToolStripMenuItem"
+        Me.InfoToolStripMenuItem.Size = New System.Drawing.Size(223, 26)
+        Me.InfoToolStripMenuItem.Text = "Info"
         '
         'HelpToolStripMenuItem
         '
@@ -137,27 +137,37 @@ Partial Class Form1
         'InShaAllahToolStripMenuItem
         '
         Me.InShaAllahToolStripMenuItem.Name = "InShaAllahToolStripMenuItem"
-        Me.InShaAllahToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.InShaAllahToolStripMenuItem.Size = New System.Drawing.Size(170, 26)
         Me.InShaAllahToolStripMenuItem.Text = "In Sha Allah"
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 31)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowHeadersWidth = 51
+        Me.DataGridView1.RowTemplate.Height = 29
+        Me.DataGridView1.Size = New System.Drawing.Size(776, 407)
+        Me.DataGridView1.TabIndex = 2
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.CheckedListBox)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents CheckedListBox As CheckedListBox
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CreateANewDatabaseToolStripMenuItem As ToolStripMenuItem
@@ -172,4 +182,6 @@ Partial Class Form1
     Friend WithEvents ABookIsReturnedToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents InShaAllahToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents InfoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DataGridView1 As DataGridView
 End Class
