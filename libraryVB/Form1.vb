@@ -2,6 +2,17 @@
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Public Class Form1
+    Public Function UnixToDateTime(ByVal strUnixTime As String) As DateTime
+
+        Dim nTimestamp As Double = strUnixTime
+        Dim nDateTime As System.DateTime = New System.DateTime(1970, 1, 1, 0, 0, 0, 0)
+        nDateTime = nDateTime.AddSeconds(nTimestamp)
+
+        Return nDateTime
+
+    End Function
+
+
     Function clearDB()
         DataGridView1.Columns.Clear()
         DataGridView1.Columns.Add("BookID", "BookID")
@@ -68,7 +79,7 @@ Public Class Form1
                 Dim objects As String()
                 objects = objReader.ReadLine().Split("|".ToCharArray)
                 If objects.Count = 5 Then
-                    DataGridView1.Rows.Add(ID, objects(0), objects(1), objects(2), objects(3), objects(4))
+                    DataGridView1.Rows.Add(ID, objects(0), objects(1), objects(2), UnixToDateTime(objects(3)), UnixToDateTime(objects(4)))
                 End If
                 ID += 1
             Loop
