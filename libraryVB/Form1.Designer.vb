@@ -112,19 +112,19 @@ Partial Class Form1
         'ABookIsBorrowedToolStripMenuItem
         '
         Me.ABookIsBorrowedToolStripMenuItem.Name = "ABookIsBorrowedToolStripMenuItem"
-        Me.ABookIsBorrowedToolStripMenuItem.Size = New System.Drawing.Size(223, 26)
+        Me.ABookIsBorrowedToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.ABookIsBorrowedToolStripMenuItem.Text = "A book is borrowed"
         '
         'ABookIsReturnedToolStripMenuItem
         '
         Me.ABookIsReturnedToolStripMenuItem.Name = "ABookIsReturnedToolStripMenuItem"
-        Me.ABookIsReturnedToolStripMenuItem.Size = New System.Drawing.Size(223, 26)
+        Me.ABookIsReturnedToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.ABookIsReturnedToolStripMenuItem.Text = "A book is returned"
         '
         'InfoToolStripMenuItem
         '
         Me.InfoToolStripMenuItem.Name = "InfoToolStripMenuItem"
-        Me.InfoToolStripMenuItem.Size = New System.Drawing.Size(223, 26)
+        Me.InfoToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.InfoToolStripMenuItem.Text = "Info"
         '
         'HelpToolStripMenuItem

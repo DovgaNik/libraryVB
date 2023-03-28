@@ -12,7 +12,6 @@ Public Class Form1
 
     End Function
 
-
     Function clearDB()
         DataGridView1.Columns.Clear()
         DataGridView1.Columns.Add("BookID", "BookID")
@@ -28,13 +27,14 @@ Public Class Form1
     End Sub
 
     Private Sub AddANewBookToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddANewBookToolStripMenuItem.Click
-        'Dim bookName As String
-        'bookName = InputBox("Plese, enter the name of the book you want to add: ", "New book").Trim
-        'If bookName <> Nothing Then
-        '    CheckedListBox.Items.Add(bookName)
-        'Else
-        '    MessageBox.Show("You did not enter a correct value!!!")
-        'End If
+        Dim bookname As String = InputBox("Plese, enter the name of the book you want to add: ", "New book").Trim()
+        Dim authorname As String = InputBox("Plese, enter the name of the auther of the book you want to add: ", "New book").Trim()
+
+        If bookname <> Nothing And authorname <> Nothing Then
+            DataGridView1.Rows.Add(DataGridView1.Rows.Count - 1, bookname, authorname, 0, "N/A", "N/A")
+        Else
+            MessageBox.Show("You did not enter a correct value!!!")
+        End If
 
     End Sub
 
